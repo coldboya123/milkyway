@@ -1,0 +1,50 @@
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <ion-slides style="margin: 10px auto;">
+      <ion-slide>
+        <img style="object-fit: cover; width: 90%; border-radius: 3%;" src="./../../assets/sua1.jpg">
+      </ion-slide>
+      <ion-slide>
+        <img style="object-fit: cover; width: 90%; border-radius: 3%;" src="./../../assets/sua2.webp">
+      </ion-slide>
+      <ion-slide>
+        <img style="object-fit: cover; width: 90%; border-radius: 3%;" src="./../../assets/sua3.jpg">
+      </ion-slide>
+    </ion-slides>
+  <ion-grid *ngFor="let p of dataservice.data.datasua">
+    <ion-row>
+
+      <ion-col size="3">
+        <img src="{{p.image}}" style="margin-bottom: 0px;">
+      </ion-col>
+
+      <ion-col size="4">
+        <b>{{p.name}}</b>
+        <p>(#40Điểm)</p>
+        <ion-icon name="cart-outline"></ion-icon>
+        <a>{{p.gia}}$</a>
+
+      </ion-col>
+
+      <ion-col size="5">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="4">
+              <ion-button color="medium" (click)="giam(p.id)">-</ion-button>
+            </ion-col>
+            <ion-col size="4">
+              <div id="soluong">
+                <p>{{p.soluong}}</p>
+              </div>
+            </ion-col>
+            <ion-col size="4">
+              <ion-button (click)="tang(p.id)">+</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</div>
+</ion-content>

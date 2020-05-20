@@ -1,0 +1,7 @@
+{
+  "name": "alego",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

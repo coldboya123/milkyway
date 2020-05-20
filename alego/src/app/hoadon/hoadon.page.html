@@ -1,0 +1,30 @@
+<ion-header>
+  
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Hóa Đơn</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let p of data">
+      <ion-row>
+        <ion-col size="4">
+          <img style="width: 100%; margin-top: 20px;" src="{{p.image}}">
+        </ion-col>
+        <ion-col size="4">
+          <h5 style="padding-top: 10px;">{{p.name}}</h5>
+          <p style="padding-bottom: 10px; color: rgb(103, 103, 250);">{{p.gia}} $</p>
+        </ion-col>
+        <ion-col size="4">
+          <p style="padding-top: 20px; font-size: 15px;">Số lượng: {{p.soluong}}</p>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+    <p>Tổng cộng:       62$</p>
+    <h5></h5>
+  </ion-list>
+</ion-content>

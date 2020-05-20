@@ -1,0 +1,35 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-title color="warning" style="font-size: large; font-weight: bold;">
+      AgriLego
+    </ion-title>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+  <ion-buttons>
+    <ion-back-button slot="start"></ion-back-button>
+  </ion-buttons>
+  <ion-tabs>
+    <ion-tab-bar slot="top">
+      <ion-tab-button tab="bo">
+        <img src="assets/images/bo.png">
+      </ion-tab-button>
+
+      <ion-tab-button tab="sua">
+        <img src="assets/images/sua.png">
+      </ion-tab-button>
+
+      <ion-tab-button tab="rau">
+        <img src="assets/images/rau.png">
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+  
+</ion-content>
+<ion-footer>
+  <div id="donhang">
+    <ion-button color="warning" expand="full" (click)="gohoadon(); addtocart()">Xem Đơn Hàng</ion-button>
+  </div>
+</ion-footer>
